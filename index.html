@@ -124,6 +124,18 @@
                              <li>Venga tu reino</li>
                              <li>Este es mi deseo</li>
                              <li>Danzo en el rio</li> 
+                             <script type="text/javascript">
+                              function load_html(){
+                                  var xml=new XMLHttpRequest();
+                                  if(xml){
+                                      xml.open("GET", "/txt/servicio.txt", false);
+                                      xml.send(null);
+                                      document.getElementById('test').innerHTML=xml.responseText;
+                              }
+                              }
+                              window.onload=load_html;
+                              </script>
+                              <div id="test"></div>
                            </ul>
                   </div>
                </div>
